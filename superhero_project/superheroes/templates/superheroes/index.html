@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <div class="index_img">
+        {% load static %}
+        <img src="{% static  'Spawn.png' %}" alt="Spawn">
+    </div>
+
     <h1>List of Heroes</h1>
     <ul>
         {% for hero in all_heroes %}
@@ -18,6 +23,7 @@
         {% endfor %}
     </ul>
     <a href="{% url 'superheroes:create' %}">Add New Hero</a>
+
 </body>
 
 </html>
